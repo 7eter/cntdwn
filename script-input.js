@@ -51,11 +51,28 @@ function inputDate() {
     var dateData = dateRegex.exec(date.toJSON());
     var timeData = timeRegex.exec(date.toJSON());
     console.log(timeData);
-    let year = dateData[1];
-    let month = dateData[2];
-    let day = dateData[3];
+    let year = parseInt(dateData[1]);
+    let month = parseInt(dateData[2]);
+    let day = parseInt(dateData[3]);
     let hour = parseInt(timeData[1])-date.getTimezoneOffset()/60;
-    let minute = timeData[2];
+    let minute = parseInt(timeData[2]);
+    if(hour==24){
+        day++;
+        hour=0;
+        if(day==32 &&( month==1 || month==3 || month==5 || month==7 || month==8 || month==10 || month==12 )){
+            month++;
+            day=1;
+        }
+        else if( (day==31 && ( month==4 || month==6 || month==9 || month==11)) || (day==29 && month==2) ){
+            month++;
+            day=1;
+        }
+        if(month>12){
+            year++;
+            month=1;
+        }
+    }
+
 
     year=input("year",year);
     month=input("month",month);

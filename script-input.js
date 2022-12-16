@@ -64,12 +64,13 @@ function inputDate() {
     minute=input("minute",parseInt(minute)+2);
     
     let dateString = year+"-"+leadingZero(month)+"-"+leadingZero(day)+"T"+leadingZero(hour)+":"+leadingZero(minute);
-    alert(dateString);
+    //alert(dateString);
     deadline = new Date(dateString).getTime();
-    alert(deadline);
+    //alert(deadline);
     let newURL = window.location.href + "?d="+(deadline/1000).toString(36);
     alert(newURL);
-    //window.location.href = newURL;
+    setTimeout(function(){window.location.href = newURL;},2000); 
+    
   }
 
 function input(what,predef="") {

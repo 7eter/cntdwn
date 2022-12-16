@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<link rel="icon" href="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text y=%22.9em%22 font-size=%2290%22&gt;%E2%8F%B3&lt;/text&gt;&lt;/svg&gt;">
+<style>
+body{
+    background-color: rgb(42, 42, 42);
+    color: white;
+    text-align: center;
+    font-family: "Lucida Console", Courier, monospace;
+    position: relative;
+    overflow: hidden;
+    z-index:1
+}
+
+body::after {
+    color: rgba(0, 0, 0, 0.3);
+    content: attr(bg);
+    display: block;
+    font-size: 50vw;
+    line-height: 1;
+    position: absolute;
+    z-index:-1;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+}
+</style>
+<script>var deadline = new Date("2022-12-03T17:40").getTime();</script>
+<script>var deadline = new Date(1670085600000).getTime();</script>
+<script>var max_time_unit = 'h'</script>
+<script src="script-input.js"></script>
+<script src="fittext.js"></script>
+</head>
+<body bg="⏳">
+<div id="cntdwn" style="font-size: 158.4px;"></div>
+<script>
+if(getParameters()==0)
+  inputDate();
+</script>
+<script>
+  window.fitText( document.getElementById("cntdwn") );
+</script>
+<script src="script.js"></script>
+</body></html>

@@ -11,6 +11,37 @@ tick[0].volume=0.05;
 tick[1].volume=0.05;
 var tickB = new Audio('tick_B.mp3');
 tickB.volume=0.7;
+var showAlarm=false;
+
+
+document.addEventListener("keydown", (event) => {
+    console.log("you pressed " + event.key);
+    let volumeChanged=false;
+    if(event.key==="ArrowUp"){
+    tick[0].volume+=0.05;
+    tick[1].volume+=0.05;
+    volumeChanged=true;
+    }
+    if(event.key==="ArrowDown"){
+    tick[0].volume-=0.05;
+    tick[1].volume-=0.05;
+    volumeChanged=true;
+    }
+    if(event.key==="PageUp"){
+    tick[0].volume=1;
+    tick[1].volume=1;
+    volumeChanged=true;
+    }
+    if(event.key==="PageDown"){
+    tick[0].volume=0.05;
+    tick[1].volume=0.05;
+    volumeChanged=true;
+    }
+    if(volumeChanged)
+        console.log("Volume set to "+ tick[0].volume)
+    return;
+});
+
 
 setInterval(function() {
 var now = new Date().getTime();
@@ -18,7 +49,7 @@ var t = deadline - now;
 var text='noch: <br>';
 var n='';
 
-if (t < 0 && t>(-60*60*1000)) {
+if (showAlarm) {
     document.getElementById("cntdwn").innerHTML = "⏰";
     return;
 }
@@ -76,6 +107,7 @@ document.getElementById("cntdwn").innerHTML=text;
 	
 if(Math.floor(t/1000)==0){
     setTimeout(function(){ding.play();},500);  
+    showAlarm=true;
 }
 else if(seconds==0){
     if(deadline - now != t)

@@ -1,4 +1,5 @@
 let url = window.location.href;
+document.title = "timer"; 
 function getParameters() {
     let n=0;
     let paramString = url.split('?')[1];
@@ -35,7 +36,7 @@ function getParameters() {
         }
         if(pair[0]==="e"){
             document.getElementsByTagName("body")[0].setAttribute("bg", pair[1]);
-            document.title = pair[1]; 
+            document.title = pair[1] + "-timer"; 
             n++;
         }
     }

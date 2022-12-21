@@ -10,3 +10,7 @@ access website [here](https://7eter.github.io/cntdwn/)
     4. Just a time: HH:MM  -  This will always refer to the current day (UTC)
 2. **e** = for setting the emoji used as an background image. Example:  [🥦](https://7eter.github.io/cntdwn/?d=16:20&e=🥦)
 3. **u** = for setting the maximum time unit that is used. (d=day, h=hour, m=minute, s=second)
+
+## Volume Controll
+- one step -> up/down 
+- min/max -> pageUp/pageDown

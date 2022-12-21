@@ -14,3 +14,4 @@ access website [here](https://7eter.github.io/cntdwn/)
 ## Volume Controll
 - one step -> up/down 
 - min/max -> pageUp/pageDown
+Note: user interaction is nessesary (click in page somewhere) for sound to be played. [MDN "Autoplay availability"](https://developer.mozilla.org/en-US/docs/Web/Media/Autoplay_guide#Autoplay_availability)

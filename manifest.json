@@ -1,15 +1,23 @@
 {
     "name": "Countdown Timer",
     "short_name": "Countdown",
+    "lang": "en-US",
     "description": "Simple countdown timer app",
     "icons": [
       {
         "src": "icon.svg",
+        "sizes": "150x150",
+        "purpose": "any maskable",
         "type": "image/svg"
+      },{
+        "src": "hourglass.png",
+        "sizes": "512x512",
+        "type": "image/png"
       }
     ],
     "start_url": ".",
     "background_color": "#fafafa",
+    "theme_color": "#fafafa",
     "display": "standalone"
   }
   

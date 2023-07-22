@@ -1,3 +1,12 @@
+window.onload = () => {
+    'use strict';
+  
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker
+               .register('./sw.js');
+    }
+  }
+
 function insertBlank(n){
     if (n<10)
         return "&nbsp;"
